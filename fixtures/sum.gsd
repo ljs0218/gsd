@@ -1,0 +1,12 @@
+# 합 타입: 첫 키로 변형을 가린다. 짧은 쓰기 `gold 650`, 긴 쓰기 {gold=650}
+@type reward = {gold:int} | {exp:int} | {item:ref(item) count:int} | {kind:str minutes:int note:str?}
+
+@props
+bonus: reward = gold 7
+bonuses: [reward] = [exp 1; {item=odd id; count=2}]
+
+@sheet steps
+id:str | rewards:[reward]                        | first:reward?
+a      | [gold 650; exp 30; item wooden_sword 1] | gold 5
+b      | [gold 1; {item=odd id; count=2}; kind bonus_minutes 30; {kind=x; minutes=1; note=hi there}; kind y 2 z] | item a 1
+c      | []                                      |

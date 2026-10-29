@@ -1,0 +1,11 @@
+# 지시문: 읽기 전용 꼬리표 — 값 트리에는 영향이 없고 스키마에만 남는다
+@enum grade = common | rare | very rare
+@ref item = #items.id label=name icon=icon
+@ref zone = maps.gsd#zones.id
+@doc items.grade = 등급
+@doc items.price = 상점가 "금화"
+
+@sheet items key=id
+id:str | name:str | icon:str | grade:enum(grade) | price:int
+sword  | Sword    | S        | common            | 10
+wand   | Wand     | W        | very rare         | 99

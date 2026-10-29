@@ -1,0 +1,4 @@
+@props
+version: int = 1
+x: int = 1.5
+y: int = 2

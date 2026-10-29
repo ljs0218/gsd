@@ -1,0 +1,10 @@
+# any: 모양이 들쭉날쭉한 값 — 글은 늘 따옴표, 객체 키는 맨말 또는 "…"
+@props
+meta: any = {a=1; b=[1; "2"; ~; true; {c="x y"}]; "k e y"=-1.5; empty=[]; obj={}; s="3"}
+
+@sheet items
+id:int | extra:any | tags:any?
+1      | {w=1}     | [1; 2]
+2      | ~         | "just text"
+3      | []        |
+4      | 12.5      | false

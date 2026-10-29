@@ -1,0 +1,21 @@
+# Dialogue tree: a node sheet (nodes) and a choice child sheet (nodes.choices). next is a ref(node) pointing at another node.
+# A choice row names its parent node in the ^ column; a choice without next ends the conversation.
+@ref node = #nodes.id label=text
+@doc nodes.next = Node that follows when this one has no choices
+@doc nodes.choices.next = Node reached by this choice (empty ends the conversation)
+
+@sheet nodes key=id
+id:str   | speaker:str | text:str                             | next:ref(node)?
+greet    | Mara        | Welcome to Mossveil. Need something? |
+work     | Mara        | Slimes are fouling the well. Care to help? |
+accepted | Mara        | Bless you. Bring me the gel when you can. | farewell
+shop     | Mara        | Browse as you like.                  | greet
+farewell | Mara        | Safe roads, traveler.                |
+
+@sheet nodes.choices
+^     | text:str              | next:ref(node)?
+greet | Any work for me?      | work
+greet | Let me see your wares | shop
+greet | Never mind.           |
+work  | I'll do it.           | accepted
+work  | Not right now.        | greet

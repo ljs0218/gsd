@@ -1,0 +1,31 @@
+# 하위 시트: 첫 열 ^ 가 부모 줄의 키 (키 열이 없으면 줄 번호), 2단은 부모키/자기키
+@sheet steps key=id
+id:str | text:str
+g1     | first
+g2     | second
+g3     | third
+
+@sheet steps.rewards key=n
+^  | n:int | kind:str | amount:int
+g1 | 1     | gold     | 100
+g1 | 2     | exp      | 5
+g3 | 1     | gold     | 7
+
+@sheet steps.rewards.sub
+^    | label:str
+g1/1 | a
+g1/1 | b
+g1/2 | c
+
+@sheet waves
+name:str
+first
+second
+
+@sheet waves.mobs opt
+^ | id:str | n:int
+1 | wolf   | 3
+1 | boar   | 2
+
+@sheet waves.extra
+^ | x:int

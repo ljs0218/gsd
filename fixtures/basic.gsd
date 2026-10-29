@@ -1,0 +1,27 @@
+# 기본 낱값: 수·글·참거짓·null·빈 것·점 경로
+@props
+version: int = 1
+name: str = 수정뿔토끼
+ratio: num = 0.25
+neg: int = -42
+big: int = 9007199254740991
+nbig: int = -9007199254740991
+tiny: num = 1.5e-7
+whole: num = 2
+on: bool = true
+off: bool = false
+nothing: str = ~
+numstr: str = 3
+empty: str = ""
+list0: [int] = []
+list: [int] = [1; 2; 3]
+words: [str] = [가; 나다; "라; 마"]
+grid: [[int]] = [[1; 2]; []; [3]]
+rec0: {} = {}
+
+@props regen
+delayMs: int = 3000
+tag: enum(mode) = fast
+
+@props "a.b".c
+x: int = 1

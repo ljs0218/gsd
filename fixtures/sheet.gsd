@@ -1,0 +1,6 @@
+# 한 줄 한 레코드: 점 열, 선택 열, 빈 칸·빈 글·빈 목록
+@sheet mobs key=id
+id:str | name:str | hitbox.w:int | hitbox.h:int | stats.maxHp:int | stats.ratio:num | ai:enum(ai) | drop:ref(drop)? | tags:[str] | pos:{x:int y:int}? | note:str?
+hare_1 | 들토끼   | 18           | 8            | 12              | 0.5             | passive     | hare_1          | [a; b]     | {x=1; y=-2}        | ""
+slime  | 슬라임   | 20           | 10           | 40              | 1               | active      |                 | []         |                    |
+wolf   | 늑대     | 56           | 24           | 90              | 1.25            | active      | ~               | [x]        | {x=0; y=0}         | ~

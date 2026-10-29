@@ -1,0 +1,6 @@
+{"steps":[
+{"id":"g1","text":"first","rewards":[{"n":1,"kind":"gold","amount":100,"sub":[{"label":"a"},{"label":"b"}]},{"n":2,"kind":"exp","amount":5,"sub":[{"label":"c"}]}]},
+{"id":"g2","text":"second","rewards":[]},
+{"id":"g3","text":"third","rewards":[{"n":1,"kind":"gold","amount":7,"sub":[]}]}
+],
+"waves":[{"name":"first","extra":[]},{"name":"second","mobs":[{"id":"wolf","n":3},{"id":"boar","n":2}],"extra":[]}]}

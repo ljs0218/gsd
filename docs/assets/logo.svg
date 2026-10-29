@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="GSD">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b8cff"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="26" fill="url(#g)"/>
+  <!-- 시트: 머리 줄과 세 줄, 세로 칸 -->
+  <rect x="22" y="26" width="84" height="16" rx="4" fill="#fff" fill-opacity=".95"/>
+  <g fill="#fff" fill-opacity=".55">
+    <rect x="22" y="48" width="38" height="12" rx="3"/>
+    <rect x="66" y="48" width="40" height="12" rx="3"/>
+    <rect x="22" y="66" width="38" height="12" rx="3"/>
+    <rect x="66" y="66" width="40" height="12" rx="3"/>
+  </g>
+  <!-- 나무: 줄 하나가 자식 시트로 내려간다 -->
+  <path d="M41 78 v14 h20" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="64" y="86" width="42" height="12" rx="3" fill="#fff" fill-opacity=".95"/>
+</svg>

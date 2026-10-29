@@ -1,0 +1,8 @@
+@sheet a key=id
+id:str
+x
+
+@sheet a.b
+^ | n:int
+x | 1
+zz | 2

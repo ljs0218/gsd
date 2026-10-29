@@ -1,0 +1,11 @@
+{
+  "name": "@gsd/core",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": { ".": "./src/gsd.ts" },
+  "scripts": {
+    "test": "node --disable-warning=ExperimentalWarning --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": { "@types/node": "^22.10.0", "typescript": "^5.7.0" }
+}

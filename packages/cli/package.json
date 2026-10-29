@@ -1,0 +1,7 @@
+{
+  "name": "@gsd/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": { "gsd": "./gsd.mjs" },
+  "dependencies": { "@gsd/core": "workspace:*" }
+}

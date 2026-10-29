@@ -1,0 +1,2 @@
+@props
+m: any = {a=hello}

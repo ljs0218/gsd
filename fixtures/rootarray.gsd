@@ -1,0 +1,5 @@
+# 뿌리가 배열
+@sheet .
+id:int | name:str
+1      | a
+2      | b

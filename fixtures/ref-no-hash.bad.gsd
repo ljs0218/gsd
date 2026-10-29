@@ -1,0 +1,3 @@
+@props
+x: int = 1
+@ref item = items.gsd.id

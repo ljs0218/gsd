@@ -1,0 +1,5 @@
+{"mobs":[
+{"id":"hare_1","name":"들토끼","hitbox":{"w":18,"h":8},"stats":{"maxHp":12,"ratio":0.5},"ai":"passive","drop":"hare_1","tags":["a","b"],"pos":{"x":1,"y":-2},"note":""},
+{"id":"slime","name":"슬라임","hitbox":{"w":20,"h":10},"stats":{"maxHp":40,"ratio":1},"ai":"active","tags":[]},
+{"id":"wolf","name":"늑대","hitbox":{"w":56,"h":24},"stats":{"maxHp":90,"ratio":1.25},"ai":"active","drop":null,"tags":["x"],"pos":{"x":0,"y":0},"note":null}
+]}

@@ -1,0 +1,1 @@
+{"sounds":{"hit":{"file":"hit.wav","vol":0.8,"layers":[{"name":"low"},{"name":"high"}]},"miss":{"file":"miss.wav","layers":[]},"a.b":{"file":"x.wav","layers":[]},"":{"file":"e.wav","vol":1,"layers":[{"name":"z"}]}}}

@@ -1,0 +1,7 @@
+packages:
+  - packages/*
+  - apps/*
+# electron 은 설치 때 실행 파일을 내려받는다, esbuild 는 바이너리를 고른다
+onlyBuiltDependencies:
+  - electron
+  - esbuild

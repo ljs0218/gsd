@@ -1,0 +1,21 @@
+# Items: weapons, armor, consumables, materials. Rarity and kind are @enum; the icon column is an emoji string.
+@enum rarity = common | uncommon | rare | epic
+@enum kind = weapon | armor | consumable | material
+@ref item = #items.id label=name icon=icon
+@doc items.rarity = Tier that decides the name colour in drops and shops
+@doc items.price = Shop sell price (gold)
+@doc items.atk = Weapons only: attack bonus
+@doc items.def = Armor only: defense bonus
+@doc items.heal = Consumables only: HP restored
+
+@sheet items key=id
+id:str         | name:str       | icon:str | kind:enum(kind) | rarity:enum(rarity) | price:int | atk:int? | def:int? | heal:int?
+wooden_sword   | Wooden Sword   | 🗡️       | weapon          | common              | 20        | 4        |          |
+iron_blade     | Iron Blade     | ⚔️       | weapon          | uncommon            | 140       | 11       |          |
+ember_staff    | Ember Staff    | 🔥        | weapon          | rare                | 620       | 24       |          |
+leather_vest   | Leather Vest   | 🦺        | armor           | common              | 45        |          | 3        |
+iron_mail      | Iron Mail      | 🛡️       | armor           | uncommon            | 260       |          | 9        |
+healing_potion | Healing Potion | 🧪        | consumable      | common              | 15        |          |          | 40
+mana_draught   | Mana Draught   | 💧        | consumable      | uncommon            | 30        |          |          | 25
+slime_gel      | Slime Gel      | 🟢        | material        | common              | 3         |          |          |
+moonpetal      | Moonpetal      | 🌸        | material        | epic                | 500       |          |          |

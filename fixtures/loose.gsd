@@ -1,0 +1,20 @@
+# 느슨하게 쓴 글: 주석·빈 줄·들여쓰기·정렬 안 맞춤·끝 칸 생략·뒤쪽 ;
+@type pair = {a:int b:int}
+
+@props
+   # 들여쓴 주석
+version:   int   =   1
+name: str =   앞뒤 공백은 잘린다   
+tab: str = "\t"
+
+
+@sheet items
+id:int|name:str|n:int?|tags:[str]?
+1|하나
+2 |  둘   | 5 |   [ a ;b;  c ; ]
+	3 | "셋" | ~ | []
+
+@sheet pairs
+id:int | p:pair
+1 | {a=1;b=2}
+2 | { a = 3 ; b = 4 ; }

@@ -1,0 +1,2 @@
+@enum g = a | b
+@enum g = c

@@ -1,0 +1,14 @@
+# Quests: the goal is a record cell, rewards are a list of a sum type [reward] (short form: `gold 120`, `item healing_potion 2`).
+@type reward = {gold:int} | {exp:int} | {item:ref(item) count:int}
+@enum goalKind = kill | collect | talk
+@ref item = items.gsd#items.id label=name icon=icon
+@ref monster = monsters.gsd#monsters.id label=name icon=icon
+@doc quests.goal = One objective: the target (monster or item) that fits kind, and a count
+@doc quests.rewards = Rewards granted on completion
+
+@sheet quests key=id
+id:str           | title:str        | level:int | goal:{kind:enum(goalKind) monster:ref(monster)? item:ref(item)? count:int} | rewards:[reward]
+slime_trouble    | Slime Trouble    | 1         | {kind=kill; monster=slime; count=5}                                        | [gold 80; exp 40]
+gel_for_potions  | Gel for Potions  | 2         | {kind=collect; item=slime_gel; count=8}                                    | [gold 120; item healing_potion 3]
+bats_of_the_cave | Bats of the Cave | 3         | {kind=kill; monster=cave_bat; count=10}                                    | [exp 150; item mana_draught 2]
+petal_hunt       | Moonlit Petal    | 8         | {kind=collect; item=moonpetal; count=1}                                    | [gold 900; item iron_mail 1; exp 600]

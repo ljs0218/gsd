@@ -1,0 +1,15 @@
+[package]
+name = "gsd"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "GSD (표와 트리를 한 파일에) 읽기 파서 — 명세는 SPEC.md"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[features]
+# 객체 키를 글에 적힌 차례로 둔다 (serde_json 의 preserve_order). 기본은 꺼 둔다 —
+# 켜면 같은 워크스페이스의 다른 crate 의 JSON 출력 차례도 바뀐다 (serde_json 의 기능은 합쳐진다).
+preserve_order = ["serde_json/preserve_order"]

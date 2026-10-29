@@ -1,0 +1,3 @@
+@type r = {gold:int} | {exp:int}
+@props
+v: r = silver 3

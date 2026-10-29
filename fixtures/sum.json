@@ -1,0 +1,6 @@
+{"bonus":{"gold":7},"bonuses":[{"exp":1},{"item":"odd id","count":2}],
+"steps":[
+{"id":"a","rewards":[{"gold":650},{"exp":30},{"item":"wooden_sword","count":1}],"first":{"gold":5}},
+{"id":"b","rewards":[{"gold":1},{"item":"odd id","count":2},{"kind":"bonus_minutes","minutes":30},{"kind":"x","minutes":1,"note":"hi there"},{"kind":"y","minutes":2,"note":"z"}],"first":{"item":"a","count":1}},
+{"id":"c","rewards":[]}
+]}

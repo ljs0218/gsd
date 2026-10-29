@@ -1,0 +1,17 @@
+# Game settings: named values (@props). Starting items are a list of ref(item).
+@ref item = items.gsd#items.id label=name icon=icon
+@doc start.items = Items a new character starts with
+
+@props
+name: str = Mossveil Chronicle
+maxLevel: int = 30
+expCurve: num = 1.35
+
+@props regen
+delayMs: int = 5000
+hpPerTick: int = 2
+mpPerTick: int = 1
+
+@props start
+gold: int = 50
+items: [ref(item)] = [wooden_sword; leather_vest; healing_potion]

@@ -1,0 +1,46 @@
+{
+  "name": "gsd-editor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "GSD Editor — open, edit and save .gsd data files",
+  "author": "GSD",
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
+    "test": "node --disable-warning=ExperimentalWarning --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test test/*.test.ts",
+    "package": "electron-vite build && electron-builder --dir --mac"
+  },
+  "dependencies": {
+    "@gsd/core": "workspace:*",
+    "@gsd/sheet": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "electron": "40.0.0",
+    "electron-builder": "^26.0.0",
+    "electron-vite": "^5.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.7.0",
+    "vite": "^7.0.0"
+  },
+  "build": {
+    "appId": "dev.gsd.editor",
+    "productName": "GSD Editor",
+    "directories": { "output": "release" },
+    "files": ["out/**", "package.json"],
+    "npmRebuild": false,
+    "fileAssociations": [
+      { "ext": "gsd", "name": "GSD data file", "description": "GSD data file", "role": "Editor" }
+    ],
+    "mac": { "target": "dir", "identity": null, "category": "public.app-category.developer-tools" },
+    "win": { "target": "dir" },
+    "linux": { "target": "dir", "category": "Development" }
+  }
+}

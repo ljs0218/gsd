@@ -1,0 +1,13 @@
+# map 시트: 첫 열이 객체 키 (레코드에는 안 들어간다)
+@sheet sounds map
+id:str | file:str | vol:num?
+hit    | hit.wav  | 0.8
+miss   | miss.wav |
+a.b    | x.wav    |
+""     | e.wav    | 1
+
+@sheet sounds.layers
+^   | name:str
+hit | low
+hit | high
+""  | z
